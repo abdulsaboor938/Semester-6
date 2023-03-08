@@ -1,4 +1,4 @@
-Question 1: True
+Numpy/nQuestion 1: True
 Question 2: True
 Question 3: True
 Question 4: True
@@ -10,8 +10,9 @@ Question 9: True
 Question 10: True
 Question 11: True
 Question 12: True
-Question 13: False
+Question 13: True
 Question 14: True
+
 Pandas/nQuestion 1: False
 Question 2: False
 Question 3: True

@@ -5,7 +5,7 @@ import pandas as pd
 
 def grade_numpy(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14):
     with open('result.txt', 'w') as f:
-        f.write('Numpy/n')
+        f.write('Numpy\n')
         f.write(f"Question 1: {np.array_equal(q1, np.arange(10))}\n")
         f.write(f"Question 2: {np.array_equal(q2, np.ones((3,3), dtype=bool))}\n")
         f.write(f"Question 3: {np.array_equal(q3, np.array([1,3,5,7,9]))}\n")
@@ -25,7 +25,7 @@ def grade_numpy(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14):
 
 def grade_pandas(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15):
     with open('result.txt', 'a') as f:
-        f.write('Pandas/n')
+        f.write('Pandas\n')
         orig = pd.read_csv('data.csv')
 
         f.write(f"Question 1: {orig.equals(q1)}\n")
@@ -44,11 +44,11 @@ def grade_pandas(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15):
         df = orig[(orig['age']>=30) & (orig['age']<=50)]
         f.write(f"Question 8: {df.equals(q8)}\n")
         df = orig['age'].sum()
-        f.write(f"Question 9: {df.equals(q9)}\n")
+        f.write(f"Question 9: {df==q9}\n")
         df = orig['age'].mean()
-        f.write(f"Question 10: {df.equals(q10)}\n")
+        f.write(f"Question 10: {df==q10}\n")
         df = orig['name'].count()
-        f.write(f"Question 11: {df.equals(q11)}\n")
+        f.write(f"Question 11: {df==q11}\n")
         df = orig.sort_values(by=['age','name'],ascending=[False,True])
         f.write(f"Question 12: {df.equals(q12)}\n")
         df = orig.assign(course='big data')
